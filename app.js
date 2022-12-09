@@ -49,6 +49,10 @@ async function run() {
       const result = await BlogCollection.updateOne(filter,updatedDoc);
       res.send(result);
     });
+
+    app.get('/',(req,res)=> {
+      res.send("server running")
+    })
   } finally {
   }
 }
